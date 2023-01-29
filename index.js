@@ -11,7 +11,6 @@ function sumTotal() {
     let outputHTML = ''
     let sum = (orange * AmountOrange.value) + (apple * AmountApple.value) + (kivi * AmountKivi.value);
     let change = money - sum;
-
     let coin10 = change / 10;
     let total = change % 10
     let coin5 = total / 5;
@@ -21,30 +20,22 @@ function sumTotal() {
     let coin1 = total / 1;
     total = total % 1;
 
+    //output
     outputHTML += '<div>';
     outputHTML += 'ราคาทั้งหมด : ' + sum + ' บาท';
     outputHTML += '</div>';
-
     outputHTML += '<div>';
     outputHTML += 'รับเงิน : ' + money + ' บาท';
     outputHTML += '</div>';
-
     outputHTML += '<div>';
     outputHTML += 'เงินทอน : ' + change + ' บาท';
     outputHTML += '</div>';
-
     outputHTML += '<div>';
     outputHTML += 'เหรียญ 10 : ' + Math.floor(coin10) + ' บาท ' + '<br/>';
     outputHTML += 'เหรียญ 5 : ' + Math.floor(coin5) + ' บาท' + '<br/>';
     outputHTML += 'เหรียญ 2 : ' + Math.floor(coin2) + ' บาท' + '<br/>';
     outputHTML += 'เหรียญ 1 : ' + Math.floor(coin1) + ' บาท' + '<br/>';
     outputHTML += '</div>';
-
     message.innerHTML = outputHTML;
 }
-
-// function showMessage(){
-//     message.innerHTML = "สิ้นค้าทั้งหมด" ;
-// }
-
 processButton.addEventListener("click", sumTotal)
