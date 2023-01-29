@@ -7,7 +7,6 @@ let message = document.getElementById('message')
 
 function sumTotal() {
     const [orange, apple, kivi] = [13, 15, 22];
-    let a = 0;
     let money = Number(0 + InputMoney.value);
     let outputHTML = ''
     let sum = (orange * AmountOrange.value) + (apple * AmountApple.value) + (kivi * AmountKivi.value);
